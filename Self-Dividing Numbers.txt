@@ -1,0 +1,13 @@
+a = int(input())
+b = int(input())
+for i in range(a,b+1):
+    n = i
+    cnt,l=0,0
+    while n!=0:
+        r = n %10
+        l+=1
+        if r!=0 and i%r==0:
+            cnt+=1
+        n=n//10
+    if cnt==l:
+        print(i,end=' ')
